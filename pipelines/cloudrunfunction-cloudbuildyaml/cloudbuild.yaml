@@ -5,9 +5,8 @@ steps:
       - 'functions'
       - 'deploy'
       - 'cloudrunfunction-cloudbuildyaml'
-      - '--source=.'
+      - '--source=pipelines/cloudrunfunction-cloudbuildyaml'
       - 'trigger-http'
       - '--runtime=nodejs20'
       - '--region=europe-west8'
       - '--allow-unauthenticated'
-
