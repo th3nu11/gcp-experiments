@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'functions'
+      - 'deploy'
+      - 'cloudrunfunction-cloudbuildyaml'
+      - '--source=.'
+      - 'trigger-http'
+      - '--runtime=nodejs20'
+      - '--region=europe-west8'
+      - '--allow-unauthenticated'
+
