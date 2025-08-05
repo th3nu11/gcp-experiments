@@ -9,6 +9,5 @@ steps:
       - '--region=europe-west8'
       - '--platform=managed'
       - '--allow-unauthenticated'
-      - '--runtime=nodejs20'
 options:
   logging: CLOUD_LOGGING_ONLY
