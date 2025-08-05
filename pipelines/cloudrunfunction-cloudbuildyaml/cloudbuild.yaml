@@ -2,14 +2,13 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
-      - 'functions'
+      - 'run'
       - 'deploy'
       - 'cloudrunfunction-cloudbuildyaml'
       - '--source=pipelines/cloudrunfunction-cloudbuildyaml'
-      - '--trigger-http'
-      - '--runtime=nodejs20'
       - '--region=europe-west8'
+      - '--platform=managed'
       - '--allow-unauthenticated'
+      - '--runtime=nodejs20'
 options:
   logging: CLOUD_LOGGING_ONLY
-timeout: 1600s
